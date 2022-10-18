@@ -1,10 +1,12 @@
 {
+  "type": "module",
   "name": "three-js-boilerplate",
   "version": "1.0.0",
   "description": "",
   "main": "scripts.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "watch": "nodemon index.js"
   },
   "repository": {
     "type": "git",
@@ -13,6 +15,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "dat.gui": "^0.7.9",
     "express": "^4.15.3"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.19"
   }
 }

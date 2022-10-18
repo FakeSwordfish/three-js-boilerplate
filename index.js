@@ -1,14 +1,17 @@
-var express = require('express'),
-    path = require('path'),
-    app = express();
+import express from "express";
+import path from "path";
 
-app.set('port', (process.env.PORT || 8080));
+const app = express();
+const targetFiles = "public";
 
-app.use(express.static('public'));
+app.set("port", process.env.PORT || 8080);
 
-app.listen(app.get('port'), function(err) {
+app.use(express.static(targetFiles));
+
+app.listen(app.get("port"), function (err) {
   if (err) {
     console.log(err);
   } else {
-    console.log('Running on port: ' + app.get('port')); }
+    console.log("Running on port: " + app.get("port"));
+  }
 });
